@@ -1,0 +1,11 @@
+{
+  "domain": "stb_proxy",
+  "name": "STB-Proxy",
+  "codeowners": ["@stevewiebe"],
+  "config_flow": true,
+  "documentation": "https://github.com/stevewiebe/stb-proxy-ha",
+  "issue_tracker": "https://github.com/stevewiebe/stb-proxy-ha/issues",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "version": "1.0.0"
+}

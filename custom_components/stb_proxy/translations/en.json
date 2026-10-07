@@ -1,0 +1,53 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to STB-Proxy",
+        "description": "Enter the host address and API key for your STB-Proxy instance. The API token can be found or generated in STB-Proxy Settings.",
+        "data": {
+          "host": "Host URL / Address",
+          "api_key": "API Token / Key"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to STB-Proxy server. Check the host address, port, and network.",
+      "invalid_auth": "Invalid API key. Please verify the API token configured in STB-Proxy Settings.",
+      "unknown": "An unexpected error occurred while communicating with STB-Proxy."
+    },
+    "abort": {
+      "already_configured": "This STB-Proxy server is already configured in Home Assistant."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "STB-Proxy Options",
+        "description": "Configure settings for this STB-Proxy instance.",
+        "data": {
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    }
+  },
+  "services": {
+    "sync": {
+      "name": "Sync Media Servers",
+      "description": "Triggers immediate synchronization with configured Plex and Jellyfin media servers in STB-Proxy."
+    },
+    "set_block": {
+      "name": "Set Channel Block",
+      "description": "Enables or disables a specific channel block in STB-Proxy.",
+      "fields": {
+        "block_name": {
+          "name": "Block Name",
+          "description": "The name of the channel block to toggle (case-insensitive)."
+        },
+        "enabled": {
+          "name": "Enabled",
+          "description": "Whether the channel block should be enabled or disabled."
+        }
+      }
+    }
+  }
+}

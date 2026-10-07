@@ -1,0 +1,22 @@
+sync:
+  name: Sync Media Servers
+  description: Triggers immediate synchronization with configured Plex and Jellyfin media servers in STB-Proxy.
+
+set_block:
+  name: Set Channel Block
+  description: Enables or disables a specific channel block in STB-Proxy.
+  fields:
+    block_name:
+      name: Block Name
+      description: The name of the channel block to toggle (case-insensitive).
+      required: true
+      example: "Sports"
+      selector:
+        text:
+    enabled:
+      name: Enabled
+      description: Whether the channel block should be enabled (active) or disabled.
+      required: true
+      example: true
+      selector:
+        boolean:
